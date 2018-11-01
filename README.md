@@ -1,5 +1,5 @@
 # KubeStudy
-Kubernetes Study
+- Book: Mastering Kubernetes
 
 ## Setup Guide
 - Kubeadam: https://kubernetes.io/docs/setup/independent/install-kubeadm/

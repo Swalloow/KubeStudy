@@ -97,6 +97,12 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/master/s
 
 # Access https://<kubernetes-master-hostname>/ui
 kops get secrets admin --type secret -oplaintext
+
+# Stop cluster
+# Change minSize, MaxSize to 0
+kops get ig
+kops edit ig nodes
+kops edit ig master
 ```
 
 ## Advanced

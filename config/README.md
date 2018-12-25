@@ -15,6 +15,8 @@ kubectl create -f redis-pod.yaml
 - 값을 환경변수로 넘기거나, 디스크 볼륨으로 마운트 가능
 - https://kubernetes.io/docs/tutorials/configuration/configure-redis-using-configmap/
 
+<br>
+
 ## PersistantVolume, PersistantVolumeClaim
 
 ```

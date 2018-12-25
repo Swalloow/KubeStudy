@@ -92,7 +92,7 @@ kubectl cluster-info
 kubectl -n kube-system get po   # system pod
 
 # Dashboard
-kops get secrets kube --type secret -oplaintext
+kops get secrets admin -oplaintext
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml
 
 # Access https://<kubernetes-master-hostname>/ui

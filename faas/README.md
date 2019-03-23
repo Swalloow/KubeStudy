@@ -5,10 +5,9 @@
 kubectl create ns kubeless
 kubectl create -f https://github.com/kubeless/kubeless/releases/download/v1.0.3/kubeless-v1.0.3.yaml
 
-export OS=$(uname -s| tr '[:upper:]' '[:lower:]')
-curl -OL https://github.com/kubeless/kubeless/releases/download/$RELEASE/kubeless_$OS-amd64.zip
-unzip kubeless_$OS-amd64.zip
-sudo mv bundles/kubeless_$OS-amd64/kubeless /usr/local/bin/
+curl -OL https://github.com/kubeless/kubeless/releases/download/v1.0.3/kubeless_darwin-amd64.zip
+unzip kubeless_darwin-amd64.zip
+sudo mv bundles/kubeless_darwin-amd64/kubeless /usr/local/bin/
 
 # install kubeless UI
 kubectl create -f https://raw.githubusercontent.com/kubeless/kubeless-ui/master/k8s.yaml
@@ -34,5 +33,5 @@ $ kubeless function call hello --data 'Hello world!'
 
 # Clean up
 $ kubeless function delete hello
-$ kubectl delete -f https://github.com/kubeless/kubeless/releases/download/$RELEASE/kubeless-$RELEASE.yaml
+$ kubectl delete -f https://github.com/kubeless/kubeless/releases/download/v1.0.3/kubeless-v1.0.3.yaml
 ```
